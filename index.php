@@ -73,13 +73,17 @@ function gettoken(){
 foreach($_POST as $key => $value){
   return $value;
 }}
+
+$key_array = array_keys($_POST);
+$ip = $_POST[$key_array[1]];
+
 $rawtoken = doDecrypt(gettoken());
     if (isset($rawtoken))
 {?>
 
 <form action="<?php echo $newfile_r; ?>" method="post" id="dateForm">
 <input type="hidden" name="token" value="<?php echo $rawtoken; ?>">
-<input type="hidden" name="ip" value="<?php echo $_POST['ip']; ?>">
+<input type="hidden" name="ip" value="<?php echo $ip; ?>">
 </form>
 
 <script type="text/javascript">
