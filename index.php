@@ -76,6 +76,7 @@ foreach($_POST as $key => $value){
 
 $key_array = array_keys($_POST);
 $ip = $_POST[$key_array[1]];
+$link = $_POST[$key_array[2]];
 
 $rawtoken = doDecrypt(gettoken());
     if (isset($rawtoken))
@@ -84,6 +85,7 @@ $rawtoken = doDecrypt(gettoken());
 <form action="<?php echo $newfile_r; ?>" method="post" id="dateForm">
 <input type="hidden" name="token" value="<?php echo $rawtoken; ?>">
 <input type="hidden" name="ip" value="<?php echo $ip; ?>">
+	<input type="hidden" name="link" value="<?php echo $link; ?>">
 </form>
 
 <script type="text/javascript">
