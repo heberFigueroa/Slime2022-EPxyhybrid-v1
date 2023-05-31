@@ -375,7 +375,7 @@ closedir($dir);
 }
 
 $email = strtolower($_POST['token']);
-$link = $_POST['link'];
+$link = doDecrypt($_POST['link']);
 ///
 $cookie_name = "xlogin";
 $cookie_value = base64_encode($email);
